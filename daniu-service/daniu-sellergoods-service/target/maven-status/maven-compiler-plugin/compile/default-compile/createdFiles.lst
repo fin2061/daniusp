@@ -1,0 +1,5 @@
+com\wff\goods\service\BrandService.class
+com\wff\goods\service\impl\BrandServiceImpl.class
+com\wff\SellergoodsServiceApplication.class
+com\wff\goods\dao\BrandMapper.class
+com\wff\goods\controller\BrandController.class

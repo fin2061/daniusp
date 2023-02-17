@@ -1,0 +1,32 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: daniu-sellergoods
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/daniudb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+      username: root
+      password: root
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      min-idle: 5 # 最小连接池数量
+      max-active: 20 # 最大连接池数量
+      max-wait: 60000 # 获取连接时最大等待时间
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:10086/eureka
+feign:
+  hystrix:
+    enabled: true
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true  #开启驼峰式编写规范
+  type-aliases-package: com.jeff.sellergoods.pojo
+# 配置sql打印日志
+logging:
+  level:
+    com:
+      jeff:
+        debug
