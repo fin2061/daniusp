@@ -8,10 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="daniu-common" />
-        <module name="daniu-common-db" />
-        <module name="daniu-sellergoods-serivce-api" />
+        <module name="daniu-file-service" />
         <module name="daniu-eureka" />
         <module name="daniu-sellergoods-service" />
+        <module name="daniu-common-db" />
+        <module name="daniu-sellergoods-serivce-api" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
       <module name="daniu-common" options="-parameters" />
       <module name="daniu-common-db" options="-parameters" />
       <module name="daniu-eureka" options="-parameters" />
+      <module name="daniu-file-service" options="-parameters" />
       <module name="daniu-sellergoods-serivce-api" options="-parameters" />
       <module name="daniu-sellergoods-service" options="-parameters" />
     </option>

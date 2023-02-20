@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5127e586-2f9c-4710-ae5d-a92eb803d5d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/src/main/java/com/wff/sellergoods/pojo/Brand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-common-db/target/daniu-common-db-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-common-db/target/daniu-common-db-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-common/target/daniu-common-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-common/target/daniu-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-eureka/target/classes/com/wff/DaniuEurekaApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-eureka/target/daniu-eureka-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-eureka/target/daniu-eureka-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-eureka/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-eureka/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-eureka/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-eureka/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/target/daniu-sellergoods-serivce-api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/target/daniu-sellergoods-serivce-api-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/SellergoodsServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/SellergoodsServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/target/daniu-sellergoods-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/target/daniu-sellergoods-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daniu-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/daniu-service/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,6 +18,7 @@
     <ignored path="$PROJECT_DIR$/daniu-common-db/target/" />
     <ignored path="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/target/" />
     <ignored path="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/target/" />
+    <ignored path="$PROJECT_DIR$/daniu-service/daniu-file-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,58 +31,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/controller/BrandController.java">
+        <entry file="file://$PROJECT_DIR$/daniu-service/daniu-file-service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/BrandService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/daniu-common/src/main/java/com/wff/common/entity/PageResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/impl/BrandServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/java/com/wff/file/FileUploader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+            <state relative-caret-position="368">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#455#456#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#546#547#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-                <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#855#856#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#1034#1035#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/resources/fsfd_client.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="34" selection-start-column="34" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -144,6 +104,9 @@
         <option value="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/controller/BrandController.java" />
         <option value="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/BrandService.java" />
         <option value="$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/impl/BrandServiceImpl.java" />
+        <option value="$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/resources/fsfd_client.conf" />
+        <option value="$PROJECT_DIR$/daniu-service/daniu-file-service/pom.xml" />
+        <option value="$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/java/com/wff/file/FileUploader.java" />
       </list>
     </option>
   </component>
@@ -196,64 +159,50 @@
               <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
               <item name="daniusp" type="462c0819:PsiDirectoryNode" />
               <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="daniu-file-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
               <item name="daniusp" type="462c0819:PsiDirectoryNode" />
               <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="daniu-file-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
               <item name="daniusp" type="462c0819:PsiDirectoryNode" />
               <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="daniusp" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="daniu-file-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
               <item name="daniusp" type="462c0819:PsiDirectoryNode" />
               <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="daniu-file-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wff" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
               <item name="daniusp" type="462c0819:PsiDirectoryNode" />
               <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="daniu-file-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wff" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="file" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="daniusp" type="b2602c69:ProjectViewProjectNode" />
               <item name="daniusp" type="462c0819:PsiDirectoryNode" />
               <item name="daniu-service" type="462c0819:PsiDirectoryNode" />
-              <item name="daniu-sellergoods-service" type="462c0819:PsiDirectoryNode" />
+              <item name="daniu-file-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="wff" type="462c0819:PsiDirectoryNode" />
-              <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -297,7 +246,20 @@
     </option>
     <option name="contentProportion" value="0.21106558" />
   </component>
-  <component name="RunManager" selected="Spring Boot.SellergoodsServiceApplication">
+  <component name="RunManager" selected="Application.FileUploader">
+    <configuration name="FileUploader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wff.file.FileUploader" />
+      <module name="daniu-file-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wff.file.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="daniu-eureka" />
       <extension name="coverage">
@@ -326,6 +288,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileUploader" />
         <item itemvalue="Spring Boot.SellergoodsServiceApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
       </list>
@@ -348,6 +311,8 @@
       <workItem from="1676619008477" duration="151000" />
       <workItem from="1676622661945" duration="5425000" />
       <workItem from="1676636607015" duration="6003000" />
+      <workItem from="1676884801659" duration="68000" />
+      <workItem from="1676885482045" duration="524000" />
     </task>
     <task id="LOCAL-00001" summary="version-o">
       <created>1676618046976</created>
@@ -360,7 +325,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18056000" />
+    <option name="totallyTimeSpent" value="18648000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -375,7 +340,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24329759" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -385,19 +350,19 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run Dashboard" order="2" weight="0.44475922" />
+      <window_info anchor="bottom" id="Run Dashboard" order="2" weight="0.4441417" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.5495751" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.633515" />
       <window_info anchor="bottom" id="Spring" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.3286119" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" weight="0.32833788" />
       <window_info anchor="bottom" id="Messages" order="15" weight="0.3286119" />
       <window_info anchor="bottom" id="SVN Repositories" order="16" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -650,20 +615,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/controller/BrandController.java">
+    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/impl/BrandServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/BrandService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+        <state relative-caret-position="-563">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -677,24 +632,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/impl/BrandServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/service/BrandService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+        <state relative-caret-position="610">
+          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service/src/main/java/com/wff/goods/controller/BrandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#1034#1035#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/resources/fsfd_client.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-file-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/daniu-service/daniu-file-service/src/main/java/com/wff/file/FileUploader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
