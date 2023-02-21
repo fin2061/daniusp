@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wff.sellergoods.pojo.Brand;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BrandService {
 
@@ -52,4 +53,10 @@ public interface BrandService {
      * @return
      */
     Page<Brand> findBrandPage(int size, int num, Brand brand);
+
+    /**
+     * 查询品牌列表
+     * @return
+     */
+    List<Map> findBrandOptions();
 }

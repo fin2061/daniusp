@@ -2,6 +2,10 @@ package com.wff.goods.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wff.sellergoods.pojo.Brand;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +17,11 @@ import com.wff.sellergoods.pojo.Brand;
  */
 public interface BrandMapper extends BaseMapper<Brand> {
 
+    /**
+     * 查询品牌列表
+     * @param id
+     * @return
+     */
+    @Select("SELECT id , `name` AS `text` FROM tb_brand")
+    List<Map> queryBrandOptions();
 }

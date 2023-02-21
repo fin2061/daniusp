@@ -6,12 +6,16 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wff.goods.dao.BrandMapper;
 import com.wff.goods.service.BrandService;
 import com.wff.sellergoods.pojo.Brand;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements BrandService {
+    @Autowired(required = false)
+    private BrandMapper brandMapper;
 
     @Override
     public List<Brand> findAllBrand() {
@@ -47,6 +51,11 @@ public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements
     public Page<Brand> findBrandPage(int size, int num, Brand brand) {
         Page<Brand> page = new Page<>(num, size);
         return this.page(page,createQueryWrapper(brand));
+    }
+
+    @Override
+    public List<Map> findBrandOptions() {
+        return brandMapper.queryBrandOptions();
     }
 
     public QueryWrapper<Brand> createQueryWrapper(Brand brand) {
