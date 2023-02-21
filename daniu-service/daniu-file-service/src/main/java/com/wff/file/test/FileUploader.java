@@ -1,4 +1,4 @@
-package com.wff.file;
+package com.wff.file.test;
 
 import org.csource.common.MyException;
 import org.csource.fastdfs.*;
