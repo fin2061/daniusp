@@ -5,6 +5,7 @@ import com.wff.common.entity.PageResult;
 import com.wff.sellergoods.pojo.TypeTemplate;
 
 import java.util.List;
+import java.util.Map;
 
 /****
  * @Author:jeff
@@ -61,11 +62,18 @@ public interface TypeTemplateService extends IService<TypeTemplate> {
      * @param id
      * @return
      */
-     TypeTemplate findById(Long id);
+    TypeTemplate findById(Long id);
 
     /***
      * 查询所有TypeTemplate
      * @return
      */
     List<TypeTemplate> findAll();
+
+    /**
+     * 根据 id 查询规格
+     * @return
+     */
+    List<Map> findSpecById(Long id);
+
 }

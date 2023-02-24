@@ -1,17 +1,22 @@
 package com.wff.goods.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wff.common.entity.PageResult;
+import com.wff.goods.dao.SpecificationOptionMapper;
 import com.wff.goods.dao.TypeTemplateMapper;
+import com.wff.sellergoods.pojo.SpecificationOption;
 import com.wff.sellergoods.pojo.TypeTemplate;
 import com.wff.goods.service.TypeTemplateService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.Map;
 
 /****
  * @Author:jeff
@@ -20,7 +25,8 @@ import java.util.List;
  *****/
 @Service
 public class TypeTemplateServiceImpl extends ServiceImpl<TypeTemplateMapper,TypeTemplate> implements TypeTemplateService {
-
+    @Autowired(required = false)
+    private SpecificationOptionMapper specificationOptionMapper;
 
     /**
      * TypeTemplate条件+分页查询
@@ -131,7 +137,7 @@ public class TypeTemplateServiceImpl extends ServiceImpl<TypeTemplateMapper,Type
      */
     @Override
     public TypeTemplate findById(Long id){
-        return  this.getById(id);
+        return null;
     }
 
     /**
@@ -141,5 +147,14 @@ public class TypeTemplateServiceImpl extends ServiceImpl<TypeTemplateMapper,Type
     @Override
     public List<TypeTemplate> findAll() {
         return this.list(new QueryWrapper<TypeTemplate>());
+    }
+
+    @Override
+    public List<Map> findSpecById(Long id) {
+        List<Map> maps = JSON.parseArray(this.getById(id).getSpecIds(),Map.class);
+        maps.forEach(p->{
+            p.put("options",specificationOptionMapper.selectList(new QueryWrapper<SpecificationOption>().eq("spec_id",p.get("id"))));
+        });
+        return maps;
     }
 }

@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /****
  * @Author:jeff
@@ -143,5 +144,12 @@ public class TypeTemplateController {
         //调用TypeTemplateService实现查询所有TypeTemplate
         List<TypeTemplate> list = typeTemplateService.findAll();
         return new Result<List<TypeTemplate>>(true, StatusCode.OK,"查询成功",list) ;
+    }
+
+    @ApiOperation(value = "TypeTemplate根据ID查询规格选项",notes = "根据ID查询TypeTemplate规格选项",tags = {"TypeTemplateController"})
+    @ApiImplicitParam(paramType = "path", name = "id", value = "主键ID", required = true, dataType = "Long")
+    @GetMapping("/options/{id}")
+    public Result<List<Map>> findSpecById(@PathVariable Long id){
+        return new Result<List<Map>>(true,StatusCode.OK,"查询成功",typeTemplateService.findSpecById(id));
     }
 }
