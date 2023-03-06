@@ -2,6 +2,7 @@ package com.wff.goods.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wff.common.entity.PageResult;
+import com.wff.goods.entity.GoodEntity;
 import com.wff.sellergoods.pojo.Goods;
 
 import java.util.List;
@@ -46,26 +47,37 @@ public interface GoodsService extends IService<Goods> {
 
     /***
      * 修改Goods数据
-     * @param goods
+     * @param goodsEntity
      */
-    void update(Goods goods);
+    void update(GoodEntity goodsEntity);
 
     /***
      * 新增Goods
-     * @param goods
+     * @param goodEntity
      */
-    void add(Goods goods);
+    void add(GoodEntity goodEntity);
+
+    /**
+     * 保存item sku
+     * @param goodEntity
+     */
+    void addItemList(GoodEntity goodEntity);
 
     /**
      * 根据ID查询Goods
      * @param id
      * @return
      */
-     Goods findById(Long id);
+     GoodEntity findById(Long id);
 
     /***
      * 查询所有Goods
      * @return
      */
     List<Goods> findAll();
+
+    /**
+     * 审核商品
+     */
+    void audit(Long goodsId);
 }

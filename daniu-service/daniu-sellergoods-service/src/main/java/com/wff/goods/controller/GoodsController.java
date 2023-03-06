@@ -3,8 +3,10 @@ package com.wff.goods.controller;
 import com.wff.common.entity.PageResult;
 import com.wff.common.entity.Result;
 import com.wff.common.entity.StatusCode;
+import com.wff.goods.entity.GoodEntity;
 import com.wff.sellergoods.pojo.Goods;
 import com.wff.goods.service.GoodsService;
+import com.wff.sellergoods.pojo.Item;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -91,31 +93,31 @@ public class GoodsController {
 
     /***
      * 修改Goods数据
-     * @param goods
+     * @param goodEntity
      * @param id
      * @return
      */
     @ApiOperation(value = "Goods根据ID修改",notes = "根据ID修改Goods方法详情",tags = {"GoodsController"})
     @ApiImplicitParam(paramType = "path", name = "id", value = "主键ID", required = true, dataType = "Long")
     @PutMapping(value="/{id}")
-    public Result update(@RequestBody @ApiParam(name = "Goods对象",value = "传入JSON数据",required = false) Goods goods,@PathVariable Long id){
+    public Result update(@RequestBody @ApiParam(name = "Goods对象",value = "传入JSON数据",required = false) GoodEntity goodEntity,@PathVariable Long id){
         //设置主键值
-        goods.setId(id);
+        goodEntity.getGoods().setId(id);
         //调用GoodsService实现修改Goods
-        goodsService.update(goods);
+        goodsService.update(goodEntity);
         return new Result(true,StatusCode.OK,"修改成功");
     }
 
     /***
      * 新增Goods数据
-     * @param goods
+     * @param goodEntity
      * @return
      */
     @ApiOperation(value = "Goods添加",notes = "添加Goods方法详情",tags = {"GoodsController"})
     @PostMapping
-    public Result add(@RequestBody  @ApiParam(name = "Goods对象",value = "传入JSON数据",required = true) Goods goods){
+    public Result add(@RequestBody  @ApiParam(name = "Goods对象",value = "传入JSON数据",required = true) GoodEntity goodEntity){
         //调用GoodsService实现添加Goods
-        goodsService.add(goods);
+        goodsService.add(goodEntity);
         return new Result(true,StatusCode.OK,"添加成功");
     }
 
@@ -127,10 +129,9 @@ public class GoodsController {
     @ApiOperation(value = "Goods根据ID查询",notes = "根据ID查询Goods方法详情",tags = {"GoodsController"})
     @ApiImplicitParam(paramType = "path", name = "id", value = "主键ID", required = true, dataType = "Long")
     @GetMapping("/{id}")
-    public Result<Goods> findById(@PathVariable Long id){
+    public Result<GoodEntity> findById(@PathVariable Long id){
         //调用GoodsService实现根据主键查询Goods
-        Goods goods = goodsService.findById(id);
-        return new Result<Goods>(true,StatusCode.OK,"查询成功",goods);
+        return new Result<GoodEntity>(true,StatusCode.OK,"查询成功",goodsService.findById(id));
     }
 
     /***

@@ -3,27 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>daniusp-parent</artifactId>
+        <artifactId>daniu-service</artifactId>
         <groupId>com.wff</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>daniu-service-api</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>daniu-sellergoods-serivce-api</module>
-        <module>daniu-service-search-api</module>
-    </modules>
+    <artifactId>dajiu-searches-service</artifactId>
+
     <dependencies>
         <dependency>
             <groupId>com.wff</groupId>
-            <artifactId>daniu-common-db</artifactId>
+            <artifactId>daniu-service-search-api</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 </project>

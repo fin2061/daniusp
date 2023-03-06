@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="daniu-sellergoods-serivce-api-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/target/daniu-sellergoods-serivce-api-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

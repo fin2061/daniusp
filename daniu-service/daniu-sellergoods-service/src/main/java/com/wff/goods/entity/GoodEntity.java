@@ -5,12 +5,14 @@ import com.wff.sellergoods.pojo.GoodsDesc;
 import com.wff.sellergoods.pojo.Item;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class ItemEntity {
+public class GoodEntity {
     //SPU
     private Goods goods;
     //SKU
-    private Item item;
+    private List<Item> items;
     //DESC
     private GoodsDesc goodsDesc;
 }

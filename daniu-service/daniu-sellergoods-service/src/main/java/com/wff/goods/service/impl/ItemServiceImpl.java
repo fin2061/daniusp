@@ -8,6 +8,7 @@ import com.wff.common.entity.PageResult;
 import com.wff.goods.dao.ItemMapper;
 import com.wff.sellergoods.pojo.Item;
 import com.wff.goods.service.ItemService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -20,7 +21,8 @@ import java.util.List;
  *****/
 @Service
 public class ItemServiceImpl extends ServiceImpl<ItemMapper,Item> implements ItemService {
-
+    @Autowired(required = false)
+    private ItemMapper itemMapper;
 
     /**
      * Item条件+分页查询
@@ -213,5 +215,10 @@ public class ItemServiceImpl extends ServiceImpl<ItemMapper,Item> implements Ite
     @Override
     public List<Item> findAll() {
         return this.list(new QueryWrapper<Item>());
+    }
+
+    @Override
+    public List<Item> findByStatus(String status) {
+        return itemMapper.selectList(new QueryWrapper<Item>().eq("status",1));
     }
 }

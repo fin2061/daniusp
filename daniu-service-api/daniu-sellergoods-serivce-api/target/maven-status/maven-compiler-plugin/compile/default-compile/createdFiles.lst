@@ -1,1 +1,8 @@
 com\wff\sellergoods\pojo\Brand.class
+com\wff\sellergoods\pojo\ItemCat.class
+com\wff\sellergoods\pojo\Item.class
+com\wff\sellergoods\pojo\Goods.class
+com\wff\sellergoods\pojo\GoodsDesc.class
+com\wff\sellergoods\pojo\TypeTemplate.class
+com\wff\sellergoods\pojo\Specification.class
+com\wff\sellergoods\pojo\SpecificationOption.class

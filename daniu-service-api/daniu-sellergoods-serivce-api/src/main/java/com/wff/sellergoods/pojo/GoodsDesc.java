@@ -19,7 +19,7 @@ import java.io.Serializable;
 public class GoodsDesc implements Serializable{
 
 	@ApiModelProperty(value = "SPU_ID",required = false)
-    @TableId(type = IdType.AUTO)
+    @TableId(type = IdType.INPUT)
     @TableField(value = "goods_id")
 	private Long goodsId;//SPU_ID
 

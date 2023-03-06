@@ -9,6 +9,9 @@
     <file url="file://$PROJECT_DIR$/daniu-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/daniu-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service-api/daniu-service-search-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/dajiu-searches-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/daniu-service/daniu-canals-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/daniu-service/daniu-file-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/daniu-service/daniu-sellergoods-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/daniu-web" charset="UTF-8" />

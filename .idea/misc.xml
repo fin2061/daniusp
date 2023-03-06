@@ -7,6 +7,13 @@
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/daniu-service-api/daniu-sellergoods-serivce-api/pom.xml" />
+        <option value="$PROJECT_DIR$/daniu-service/daniu-canal-service/pom.xml" />
+        <option value="$PROJECT_DIR$/daniu-service/daniu-search-service/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">

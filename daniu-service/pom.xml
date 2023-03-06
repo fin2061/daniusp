@@ -14,6 +14,8 @@
     <modules>
         <module>daniu-sellergoods-service</module>
         <module>daniu-file-service</module>
+        <module>daniu-canals-service</module>
+        <module>dajiu-searches-service</module>
     </modules>
 
 </project>
