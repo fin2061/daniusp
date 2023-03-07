@@ -12,8 +12,9 @@
     <artifactId>daniu-service-api</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>daniu-sellergoods-serivce-api</module>
         <module>daniu-service-search-api</module>
+        <module>daniu-service-sellergoods-api</module>
+        <module>daniu-search-web-api</module>
     </modules>
     <dependencies>
         <dependency>

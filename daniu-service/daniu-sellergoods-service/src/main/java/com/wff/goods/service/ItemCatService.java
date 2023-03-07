@@ -69,4 +69,6 @@ public interface ItemCatService extends IService<ItemCat> {
      * @return
      */
     List<ItemCat> findAll();
+
+    ItemCat findById(Long id);
 }

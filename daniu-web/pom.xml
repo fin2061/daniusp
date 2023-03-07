@@ -11,5 +11,9 @@
 
     <artifactId>daniu-web</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>daniu-search-web</module>
+        <module>daniu-item-web</module>
+    </modules>
 
 </project>

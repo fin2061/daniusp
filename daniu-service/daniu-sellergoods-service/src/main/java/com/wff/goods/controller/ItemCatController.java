@@ -133,6 +133,11 @@ public class ItemCatController {
         return new Result<List<ItemCat>>(true,StatusCode.OK,"查询成功",itemCatService.findByParentId(id));
     }
 
+    @GetMapping("/item/{id}")
+    public Result<ItemCat> findById(@PathVariable Long id){
+        return new Result<ItemCat>(true,StatusCode.OK,"查询成功",itemCatService.findById(id));
+    }
+
     /***
      * 查询ItemCat全部数据
      * @return

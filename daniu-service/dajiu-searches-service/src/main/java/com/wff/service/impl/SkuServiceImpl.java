@@ -9,7 +9,6 @@ import com.wff.search.pojo.SkuInfo;
 import com.wff.sellergoods.pojo.Item;
 import com.wff.service.SkuService;
 import org.elasticsearch.index.query.BoolQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.aggregations.AggregationBuilders;
 import org.elasticsearch.search.aggregations.bucket.terms.Terms;
@@ -25,10 +24,7 @@ import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilde
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class SkuServiceImpl implements SkuService {
@@ -72,6 +68,7 @@ public class SkuServiceImpl implements SkuService {
         //分组
         nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms("skuCategorygroup").field("category"));
         nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms("skuBrandgroup").field("brand"));
+        nativeSearchQueryBuilder.addAggregation(AggregationBuilders.terms("skuSpecgroup").field("spec.keyword").size(100));
         //match
         nativeSearchQueryBuilder.withHighlightFields(new HighlightBuilder.Field("title"));
         nativeSearchQueryBuilder.withHighlightBuilder(new HighlightBuilder().preTags("<em style=\"color:red\">").postTags("</em>"));
@@ -80,10 +77,11 @@ public class SkuServiceImpl implements SkuService {
         nativeSearchQueryBuilder.withFilter(buildSpec(searchMap));
 
         //分页查询
-        Integer pageNum = Integer.parseInt(searchMap.get("pageNum"));
-        if (pageNum == null) {
-            pageNum = 1;
+        String stringNum = searchMap.get("pageNum");
+        if (stringNum == null) {
+            stringNum = "1";
         }
+        Integer pageNum = Integer.parseInt(stringNum);
         Integer pageSize = 20;
         nativeSearchQueryBuilder.withPageable(PageRequest.of(pageNum - 1, pageSize));
 
@@ -102,6 +100,7 @@ public class SkuServiceImpl implements SkuService {
         SearchPage<SkuInfo> hitsPage = SearchHitSupport.searchPageFor(hits, query.getPageable());
         Terms terms = hits.getAggregations().get("skuCategorygroup");
         Terms brandTerms = hits.getAggregations().get("skuBrandgroup");
+        Terms specTerms = hits.getAggregations().get("skuSpecgroup");
 
         //SearchHits<SkuInfo> ===> Map
         List<SkuInfo> skus = new ArrayList<>();
@@ -125,6 +124,7 @@ public class SkuServiceImpl implements SkuService {
             skus.add(skuInfo);
         }
 
+        //品牌
         List<String> brands = new ArrayList<>();
         if (terms != null) {
             for (Terms.Bucket bucket : brandTerms.getBuckets()) {
@@ -133,6 +133,7 @@ public class SkuServiceImpl implements SkuService {
             }
         }
 
+        //分类
         List<String> catGories = new ArrayList<>();
         if (terms != null) {
             for (Terms.Bucket bucket : terms.getBuckets()) {
@@ -141,6 +142,9 @@ public class SkuServiceImpl implements SkuService {
             }
         }
 
+        //规格
+        Map<String,Set<String>> specMap = packSkuSpec(specTerms);
+
         //返回结果
         Map resultMap = new HashMap();
         resultMap.put("rows", skus);
@@ -148,7 +152,35 @@ public class SkuServiceImpl implements SkuService {
         resultMap.put("totalPages", hitsPage.getTotalPages());
         resultMap.put("categoryList", catGories);
         resultMap.put("brandList", brands);
+        resultMap.put("specMap", specMap);
         return resultMap;
+    }
+
+    //分类规格封装
+    private Map<String, Set<String>> packSkuSpec(Terms terms){
+        Map<String,Set<String>> specMap = new HashMap<>();
+        Set<String> spec = new HashSet<>();
+        if (terms != null) {
+            for (Terms.Bucket bucket : terms.getBuckets()) {
+                spec.add(bucket.getKeyAsString());
+            }
+        }
+        for (String specjson : spec) {
+            Map<String, String> map = JSON.parseObject(specjson, Map.class);
+            for (Map.Entry<String, String> entry : map.entrySet()) {//
+                String key = entry.getKey();
+                String value = entry.getValue();
+                Set<String> specValues = specMap.get(key);
+                if (specValues == null) {
+                    specValues = new HashSet<String>();
+                }
+                //将当前规格加入到集合中
+                specValues.add(value);
+                //将数据存入到specMap中
+                specMap.put(key, specValues);
+            }
+        }
+        return specMap;
     }
 
     private BoolQueryBuilder buildSpec(Map<String, String> searchMap) {

@@ -139,4 +139,9 @@ public class ItemCatServiceImpl extends ServiceImpl<ItemCatMapper,ItemCat> imple
     public List<ItemCat> findAll() {
         return this.list(new QueryWrapper<ItemCat>().eq("parent_id",0));
     }
+
+    @Override
+    public ItemCat findById(Long id) {
+        return this.getById(id);
+    }
 }

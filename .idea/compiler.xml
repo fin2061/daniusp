@@ -8,13 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="daniu-canals-service" />
+        <module name="daniu-service-sellergoods-api" />
+        <module name="daniu-searcher-service" />
         <module name="daniu-common" />
         <module name="daniu-service-search-api" />
         <module name="daniu-file-service" />
         <module name="daniu-eureka" />
+        <module name="daniu-item-web" />
+        <module name="daniu-search-web-api" />
         <module name="daniu-sellergoods-service" />
-        <module name="daniu-searcher-service" />
         <module name="dajiu-searches-service" />
+        <module name="daniu-search-web" />
         <module name="daniu-common-db" />
       </profile>
     </annotationProcessing>
@@ -34,11 +38,15 @@
       <module name="daniu-common-db" options="-parameters" />
       <module name="daniu-eureka" options="-parameters" />
       <module name="daniu-file-service" options="-parameters" />
+      <module name="daniu-item-web" options="-parameters" />
       <module name="daniu-search-service" options="-parameters" />
+      <module name="daniu-search-web" options="-parameters" />
+      <module name="daniu-search-web-api" options="-parameters" />
       <module name="daniu-searcher-service" options="-parameters" />
       <module name="daniu-sellergoods-serivce-api" options="-parameters" />
       <module name="daniu-sellergoods-service" options="-parameters" />
       <module name="daniu-service-search-api" options="-parameters" />
+      <module name="daniu-service-sellergoods-api" options="-parameters" />
     </option>
   </component>
 </project>

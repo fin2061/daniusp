@@ -1,0 +1,28 @@
+server:
+  port: 9005
+spring:
+  application:
+    name: daniu-search-web
+  thymeleaf:
+    cache: false
+  main:
+    allow-bean-definition-overriding: true
+#注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:10086/eureka
+#feign
+feign:
+  hystrix:
+    enabled: true
+#hystrix
+hystrix:
+  command:
+    default:  #default全局有效，service id指定应用有效
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000 #断路器超时时间，默认1000ms
